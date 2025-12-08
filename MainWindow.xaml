@@ -1,6 +1,7 @@
 ﻿<Window x:Class="BrailleApp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        
         Title="Braille Display Control"
         Height="650"
         Width="800"

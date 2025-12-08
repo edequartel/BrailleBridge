@@ -1,0 +1,170 @@
+BRAILLEBRIDGE LOCAL API – PLAIN TEXT
+====================================
+
+BASE URL
+--------
+http://localhost:5000
+ws://localhost:5000/ws
+
+
+HTTP ENDPOINTS
+---------------
+
+1) POST /braille
+Description: Send text to the braille display.
+Request body: plain text.
+Response: "text received"
+
+2) GET /clear
+Description: Clear the braille display.
+Response: "/clear received"
+
+3) GET /ping
+Description: Health check endpoint.
+Response: "/ping received"
+
+4) GET /devices
+Description: Returns a JSON list of available braille devices.
+Response: JSON array.
+
+5) GET /braille/test
+Description: Simple test endpoint.
+Response: "/braille/test"
+
+6) OPTIONS (any path)
+Description: CORS preflight.
+Response: 200 OK
+
+
+WEBSOCKET ENDPOINT
+------------------
+
+ws://localhost:5000/ws
+
+Client → Bridge:
+- Send a UTF-8 text message.
+- The text is displayed on the braille device.
+
+Bridge → Client:
+- Sends JSON messages for braille key events (raw + mapped).
+
+
+WEBSOCKET KEY EVENT MESSAGE FORMAT (JSON)
+-----------------------------------------
+
+Example message:
+
+{
+  "MsgType": 8,
+  "UnitId": 1,
+  "Strip": 1,
+  "ButtonIndex": 0,
+  "IsPress": true,
+
+  "Kind": 2,
+  "CursorIndex": -1,
+  "Name": "LeftThumb"
+}
+
+Field description:
+MsgType: raw SAM message type. 8 = NORMAL key press, 11 = cursor routing.
+UnitId: SAM braille unit ID.
+Strip: device strip index (0 = routing, 1 = thumb keys).
+ButtonIndex: resolved button index, bitmasks converted to numeric index.
+IsPress: true for a press event.
+
+Kind:
+0 = Unknown  
+1 = CursorRouting  
+2 = ThumbKey  
+
+CursorIndex:
+Routing key index (0–39 on Focus 40).  
+-1 if not routing key.
+
+Name:
+Logical key name from the keymap for thumb keys.
+Null if not mapped.
+
+
+WEBSOCKET MAPPING RULES (FOR UPDATED KEYMAP)
+--------------------------------------------
+
+Updated keymap:
+
+{
+  "deviceId": "FOCUS40",
+  "description": "Freedom Scientific Focus 40 Blue",
+  "identifierPrefixes": ["40", "FOCUS 40", "FS-FOCUS40"],
+
+  "cursorRoutingStrip": 0,
+  "thumbKeyStrip": 1,
+
+  "thumbKeys": {
+    "0": "LeftThumb",
+    "1": "MiddleLeftThumb",
+    "2": "MiddleRightThumb",
+    "3": "RightThumbKey"
+  }
+}
+
+Mapping logic:
+
+1) Cursor Routing Keys  
+Triggered when:
+- MsgType = 11  
+- Strip = cursorRoutingStrip (0)
+
+Result:
+Kind = CursorRouting  
+CursorIndex = button index  
+Name = null  
+
+Example output:
+{
+  "Kind": 1,
+  "CursorIndex": 14
+}
+
+2) Thumb Keys  
+Triggered when:
+- MsgType = 8  
+- Strip = thumbKeyStrip (1)
+- ButtonIndex is found in thumbKeys mapping  
+
+Mapping table:
+0 → "LeftThumb"  
+1 → "MiddleLeftThumb"  
+2 → "MiddleRightThumb"  
+3 → "RightThumbKey"  
+
+Example output:
+{
+  "Kind": 2,
+  "Name": "MiddleRightThumb"
+}
+
+3) Unknown Keys  
+If neither cursor routing nor thumb mapping applies:
+
+{
+  "Kind": 0
+}
+
+
+CLIENT BEHAVIOR SUMMARY
+------------------------
+
+POST /braille:
+  Displays the provided text on the braille device.
+
+GET /clear:
+  Clears the braille display.
+
+GET /devices:
+  Returns detected braille units as JSON.
+
+WebSocket:
+  Sending text → updates the braille display.
+  Receiving messages → gives JSON describing key events (raw + mapped).
+

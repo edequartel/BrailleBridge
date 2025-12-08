@@ -38,3 +38,8 @@ C:\Developer\Software development\BrailleBridge\obj\Debug\net8.0-windows\WPF_BS_
 C:\Developer\Software development\BrailleBridge\obj\Debug\net8.0-windows\WPF_BS_SAM_Braille.genruntimeconfig.cache
 C:\Developer\Software development\BrailleBridge\obj\Debug\net8.0-windows\ref\WPF_BS_SAM_Braille.dll
 C:\Developer\Software development\BrailleBridge\obj\Debug\net8.0-windows\WPF_BS_SAM_Braille_Content.g.cs
+C:\Developer\Software development\BrailleBridge\bin\Debug\net8.0-windows\MaterialDesignColors.dll
+C:\Developer\Software development\BrailleBridge\bin\Debug\net8.0-windows\MaterialDesignThemes.Wpf.dll
+C:\Developer\Software development\BrailleBridge\bin\Debug\net8.0-windows\Microsoft.Xaml.Behaviors.dll
+C:\Developer\Software development\BrailleBridge\obj\Debug\net8.0-windows\WPF_BS_SAM_Braille.csproj.AssemblyReference.cache
+C:\Developer\Software development\BrailleBridge\obj\Debug\net8.0-windows\WPF_BS_S.581DBC7C.Up2Date
