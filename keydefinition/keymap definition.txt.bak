@@ -1,0 +1,7 @@
+LeftThumbkeyPressed:msgType=8 unit=1 strip=0 btn=2097152 press=true
+RightThumbkeyPressed: msgType=8 unit=1 strip=0 btn=8388608 press=true 
+LeftMiddleThumbkeyPressed: msgType=8 unit=1 strip=0 btn=16384 press=true 
+RightMiddleThumbkeyPressed: msgType=8 unit=1 strip=0 btn=16384 press=true
+cursorRouting(0): msgType=11 unit=1 strip=0 btn=0 press=true
+cursorRouting(9): msgType=11 unit=1 strip=0 btn=9 press=true
+cursorRouting("var"): msgType=11 unit=1 strip=0 btn="var" press=true

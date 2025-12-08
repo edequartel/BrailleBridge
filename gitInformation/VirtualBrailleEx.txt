@@ -1,0 +1,126 @@
+Virtual Braille Extended Driver
+1. Overview
+VirtualBrailleEx is a SAM version 2 device driver that can demonstrate the new features added to SAM version 2. It can simulate braille cells, sliders dials and other input devices using on screen dialogs. It is fully configurable to allow the number of strips and their properties to be altered. It can be used in conjunction with SamExplorer and other SAM clients.
+2. Installing VirtualBrailleEx
+The VirtualBrailleEx.dll and VirtualBrailleEx.sdi files should be placed in a directory named VirtualBrailleEx in the SAM installation directory.
+
+3. Configuring VirtualBrailleEx
+3.1. Main Configuration Dialog
+
+
+The list on the left shows the strip types available, and the list on the right shows the strips that have been installed, with information on their name, type and number of cells or buttons.
+
+Strips may be added and removed using the corresponding buttons below, or the keyboard short cuts Ctrl+A and Ctrl+R respectively. The currently selected installed strip may be edited by using the properties button or Ctrl+P.
+
+The Enable button allows the virtual braille display to be enabled or disabled. When disabled it will not be visible to SAM clients, and the windows will not appear on screen.
+
+The strip types listed correspond to those defined in SAM by a combination of the type and caps field in the STRIPPARAMS structure:-
+
+NameSTRIPPARAMS typeSTRIPPARAMS capsDescriptionDisplaySAMSTRIP_DISPLAYMain Braille display cellsStatusSAMSTRIP_STATUSBraille Status cellsAuxiliarySAMSTRIP_AUXILIARYAdditional strips of cellsKeysSAMSTRIP_KEYSKeys that can be pressed in combinationButtonsSAMSTRIP_BUTTONSRouting buttons without corresponding cellsSliderSAMSTRIP_BUTTONSSAMBRLCAPS_SLIDERA slider type deviceDialSAMSTRIP_BUTTONSSAMBRLCAPS_DIALA dial with preset positionsWheelSAMSTRIP_BUTTONSSAMBRLCAPS_WHEELA wheel returning direction of turn information2DSAMSTRIP_BUTTONSSAMBRLCAPS_2DA two dimensional input device such as a joystickPressureSAMSTRIP_BUTTONSSAMBRLCAPS_2D SAMBRLCAPS_PRESSUREA two dimensional device that can return pressure applied such as graphics tablet
+3.2. Cell Strip Configuration Dialog
+
+
+The cell strip configuration is used for strips of type display, status and auxiliary. It allows the name of the strip, the number of cells, button information, the orientation, and capability flags to be altered.
+
+The button press states field should contain zero if only button down messages are to be delivered to clients, and 1 if button up and button down messages are supported.
+
+The number of button combinations field allows the simulation of multiple routing buttons per cell, or the effect of pressing a routing button in combination with shifting keys. As the field is altered, entries are added and removed from the combination name list below. The names in this list can be edited by single clicking twice on the entry or pressing space when it is selected.
+3.3. Key Strip Configuration Dialog
+
+
+This dialog is used to configure strips of keys that can be pressed in combination with each other.
+
+Keys may be added and removed using the associated buttons, and their names edited by single clicking twice on the entry or pressing space when it is selected.
+
+The drop down list at the bottoms allows a predefined action code to be associated with a button combination. First the action should be selected from the drop down list, then one of more keys selected from list above. The Set Action button is then used to remember this combination. An asterisk will appear after the action name to indicate that it has a combination associated with it.
+
+If the action is selected from the drop down list has an association with a combination of keys on this strip, those keys will be shown in the list. The Clear Action button can be used to remove the association, and the action name will no longer be shown with an asterisk.
+
+3.4. Button Strip Configuration Dialog
+
+
+The button strip configuration is used for strips of type buttons, slider, dial, wheel, 2D and Pressure. It allows the name of the strip, the number of buttons, button information, the orientation.
+
+The capabilities radio buttons allows switching between the types of strips. The labels of the number of buttons, button press states and button combination fields change appropriately. For some strip types the number of buttons, or button combination names are not editable.
+
+The button press states field should contain zero if only button down messages are to be delivered to clients, and 1 if button up and button down messages are supported.
+
+The number of button combinations field allows the simulation of the effect of pressing a routing button in combination with shifting keys. As the field is altered, entries are added and removed from the combination name list below. The names in this list can be edited by single clicking twice on the entry or pressing space when it is selected.
+
+The action group allows a predefined action code to be associated with a button. First the action should be selected from the drop down list, then button number and combination chosen using the fields below. The Set Action button is then used to remember this association. An asterisk will appear after the action name to indicate that it has a button associated with it.
+
+If the action is selected from the drop down list has an association with a combination of buttons on this strip, the button information will be shown in the fields below. The Clear Action button can be used to remove the association, and the action name will no longer be shown with an asterisk.
+
+4. Using VirtualBrailleEx
+When SAM is started the a window for each of the VirtualBrailleEx strips will appear on screen, these will remain displayed for 30 seconds, if no client application is using the driver. The windows will be redisplayed when a client opens the driver.
+
+The windows remain topmost on the screen, and can be moved to the desired positions, which are remembered between sessions.
+
+4.1. Cell Strips
+
+
+Cell strip dialogs are used for strips of type display, status and auxiliary. They may be either horizontally or vertically orientated. The cell strips show the braille output from SAM translated back in to ASCII characters. The cell background colour indicates whether dots 7 and 8 are set. The cursor cell is indicated by flashing blue and red outline.
+
+BackgroundDot 7Dot 8WhiteOffOffYellowOnOffCyanOffOnGreenOnOn
+As the mouse is moved over the cells button press events corresponding to the first button combination of the cell is send to the client application. You do not need to click on the cells, as if the current application looses the input focus to the cell dialog, button pressed events will not be delivered to it.
+
+To simulate up to 8 button combinations, the SHIFT, CTRL and ALT keys can be held down as the mouse is moved over the cells.
+
+CombinationKeys to use0(None)1Shift2Ctrl3Shift + Ctrl4Alt5Shift + Alt6Ctrl + Alt7Shift + Ctrl + Alt4.2. Keys Strip
+
+The Key strip dialog allows the simulation of keys that can be pressed in combination.
+
+If the mouse is moved over a key, a key pressed event will be delivered to the client application for that key.
+
+To simulate holding down other keys simultaneously, press SHIFT as the mouse is moved over them.
+
+If the mouse is moved over a key without SHIFT held down, the all keys except the current one are released.
+
+
+
+
+
+4.3. Button Strips
+
+
+Button strips act like the routing buttons on a cell strip, but do not have any cells associated with them. Moving the mouse over the buttons produces button pressed messages as for Cell strips.
+
+4.4. Slider Strip
+
+
+A slider strip simulates a slider control, it may have either horizontal or vertical orientation.
+
+As the mouse is moved over the slider button pressed events for the current position, button combination zero, and button up state, messages are produced.
+
+To produce button down messages (if the slider has a button that can be pressed whilst being moved), hold down the Windows menu key (next to the right CTRL key) as the mouse is moved over the slider.
+
+To generate other button combinations, hold down a combination of SHIFT, CTRL and ALT keys, as described for the Cells Strip Dialog.
+
+
+
+
+
+4.5. Dial and Wheel Strips
+    
+
+For dial and wheel strips a central box shows the current value, and the two buttons cause button pressed events for the current value or turn direction, with button combination zero and button up state, are sent to the client application.
+
+For dial strips moving the mouse over the left and right buttons will decrement or increment the value by one each time. For wheel strips, moving the mouse over the buttons will generate turning anti-clockwise and turning clockwise values, when not over the buttons a no turn value is set.
+
+To produce button down messages (if the dial or wheel has a button that can be pressed whilst being moved), hold down the Windows menu key (next to the right CTRL key) as the mouse is moved over the buttons. On a wheel, this can be used over the value box to simulate pressing its button without turning it.
+
+To generate other button combinations, hold down a combination of SHIFT, CTRL and ALT keys, as described for the Cells Strip Dialog.
+
+4.6. 2D and Pressure Strips
+    
+
+Both 2D and pressure strips generate button pressed events when the mouse moves over them. The button number corresponds to the X position and the button combination corresponds to the Y position.
+
+For 2D strips movement normally generates button up messages, but the shift is pressed button down messages are generated.
+
+For pressure strips the combination of shift, ctrl and alt can be used to produce the first 8 button state values, that correspond to the pressure applied. See cell strips for details of the values produced by the combinations.
+
+
+
+- 1 -
+

@@ -1,0 +1,128 @@
+﻿<Window x:Class="BrailleApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Braille Display Control"
+        Height="650"
+        Width="800"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Braille monitor -->
+            <RowDefinition Height="Auto"/>
+            <!-- Title -->
+            <RowDefinition Height="Auto"/>
+            <!-- Unit selection -->
+            <RowDefinition Height="Auto"/>
+            <!-- Buttons -->
+            <RowDefinition Height="Auto"/>
+            <!-- Live input label -->
+            <RowDefinition Height="120"/>
+            <!-- Live input textbox -->
+            <RowDefinition Height="Auto"/>
+            <!-- Memo label -->
+            <RowDefinition Height="80"/>
+            <!-- Memo textbox -->
+            <RowDefinition Height="*"/>
+            <!-- Braille key events -->
+            <RowDefinition Height="Auto"/>
+            <!-- Status -->
+        </Grid.RowDefinitions>
+
+        <!-- BRAILLE MONITOR -->
+        <GroupBox Grid.Row="0"
+                  Header="Braille monitor (what is on the braille display)"
+                  Margin="0 0 0 10">
+            <Border Padding="4" BorderBrush="Gray" BorderThickness="1">
+                <TextBlock Text="{Binding BrailleMonitorText}"
+                           FontFamily="Courier New"
+                           FontSize="16"
+                           TextWrapping="NoWrap" />
+            </Border>
+        </GroupBox>
+
+        <!-- TITLE -->
+        <TextBlock Grid.Row="1"
+                   Text="Braille Display Test Utility"
+                   FontSize="20"
+                   FontWeight="Bold"
+                   Margin="0 0 0 10" />
+
+        <!-- UNIT SELECTION -->
+        <StackPanel Grid.Row="2"
+                    Orientation="Horizontal"
+                    Margin="0 0 0 10">
+            <TextBlock Text="Braille unit:"
+                       VerticalAlignment="Center"
+                       Margin="0 0 5 0"/>
+            <ComboBox Width="280"
+                      ItemsSource="{Binding AvailableUnits}"
+                      SelectedIndex="{Binding SelectedUnitIndex}" />
+
+            <Button Content="Refresh"
+                    Width="80"
+                    Margin="10 0 0 0"
+                    Command="{Binding RefreshUnitsCommand}" />
+        </StackPanel>
+
+        <!-- MAIN BUTTONS -->
+        <StackPanel Grid.Row="3"
+                    Orientation="Horizontal"
+                    Margin="0 0 0 10">
+            <Button Content="Initialize"
+                    Width="100"
+                    Margin="0 0 10 0"
+                    Command="{Binding InitializeCommand}" />
+
+            <Button Content="Send memo"
+                    Width="100"
+                    Margin="0 0 10 0"
+                    Command="{Binding SendCommand}" />
+
+            <Button Content="Clear"
+                    Width="80"
+                    Command="{Binding ClearCommand}" />
+        </StackPanel>
+
+        <!-- LIVE INPUT LABEL -->
+        <TextBlock Grid.Row="4"
+                   Text="Live input (sent on each keystroke to braille):"
+                   Margin="0 0 0 3" />
+
+        <!-- LIVE INPUT TEXT (auto-sent) -->
+        <TextBox Grid.Row="5"
+                 Text="{Binding InputText, UpdateSourceTrigger=PropertyChanged}"
+                 AcceptsReturn="True"
+                 VerticalScrollBarVisibility="Auto"
+                 FontSize="14" />
+
+        <!-- MEMO LABEL -->
+        <TextBlock Grid.Row="6"
+                   Text="Memo text (only sent when pressing 'Send memo'):"
+                   Margin="0 5 0 3" />
+
+        <!-- MEMO TEXT BOX -->
+        <TextBox Grid.Row="7"
+                 Text="{Binding SecondText, UpdateSourceTrigger=PropertyChanged}"
+                 AcceptsReturn="True"
+                 VerticalScrollBarVisibility="Auto"
+                 FontSize="14" />
+
+        <!-- BRAILLE KEY EVENTS LIST -->
+        <GroupBox Grid.Row="8"
+                  Header="Braille key events (from WM_SAM)"
+                  Margin="0 10 0 10">
+            <ListBox ItemsSource="{Binding BrailleKeyEvents}"
+                     FontFamily="Consolas"
+                     FontSize="12" />
+        </GroupBox>
+
+        <!-- STATUS -->
+        <TextBlock Grid.Row="9"
+                   Text="{Binding Status}"
+                   TextWrapping="Wrap"
+                   Foreground="DarkSlateGray"
+                   FontSize="14" />
+    </Grid>
+</Window>

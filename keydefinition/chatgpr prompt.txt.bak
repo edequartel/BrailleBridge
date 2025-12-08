@@ -1,0 +1,89 @@
+
+You are an assistant that creates HTML + JavaScript that I can open in a browser.
+
+Goal
+Make an HTML page that connects to a WebSocket and reacts to braille display key events.
+
+WebSocket
+
+* Connect to a WebSocket URL (I’ll change it later, so put it at the top as a configurable variable).
+* Messages are JSON objects with at least these fields:
+
+  * Kind (number or string)
+  * Name (string, may be null)
+  * CursorIndex (number, -1 if not used)
+
+Assume my C# backend sends logical events like this:
+
+{
+"MsgType": 8,
+"UnitId": 1,
+"Strip": 0,
+"ButtonIndex": 2097152,
+"IsPress": true,
+"Kind": 2,
+"Name": "LeftThumb",
+"CursorIndex": -1
+}
+
+or for cursor routing:
+
+{
+"MsgType": 11,
+"UnitId": 1,
+"Strip": 0,
+"ButtonIndex": 9,
+"IsPress": true,
+"Kind": 1,
+"Name": null,
+"CursorIndex": 9
+}
+
+Interpretation of events
+
+* Treat Kind as an enum:
+
+  * 1 or "CursorRouting" → cursor routing key
+  * 2 or "ThumbKey" → thumb key
+
+* For thumb keys (Kind == ThumbKey):
+
+  * Use the Name field to decide the action.
+  * Possible names:
+
+    * "LeftThumb"
+    * "MiddleLeftThumb"
+    * "MiddleRightThumb"
+    * "RightThumb"
+  * Implement a simple example behaviour, for example:
+
+    * LeftThumb → move a selection left
+    * RightThumb → move a selection right
+    * MiddleLeftThumb → confirm / “OK”
+    * MiddleRightThumb → cancel / “back”
+
+* For cursor routing (Kind == CursorRouting):
+
+  * Use CursorIndex as the index of a braille cell (0–39).
+  * Implement an example where the HTML shows a row of 40 cells (divs or spans), and when a routing key is pressed, the cell at CursorIndex is visually highlighted.
+
+What the assistant must output
+
+* A complete HTML file in one block, ready to save as index.html.
+* It must:
+
+  * Contain minimal CSS to show:
+
+    * Connection status (connected / disconnected).
+    * A row of 40 cells for cursor routing visualization.
+    * A log area that shows the last N events as text.
+  * Include JavaScript that:
+
+    * Opens the WebSocket.
+    * Parses incoming JSON.
+    * Uses Kind and Name / CursorIndex as described above.
+    * Updates the UI accordingly.
+* Use plain JavaScript, no frameworks.
+* Use clear function names and comments so I can change the behaviour later.
+
+Start your answer with a single <html> tag and give only the code (no extra explanation).

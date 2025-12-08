@@ -1,0 +1,17 @@
+{
+  "deviceId": "FOCUS40",
+  "description": "Freedom Scientific Focus 40 Blue",
+
+  "identifierPrefixes": ["F40", "FOCUS40", "FOCUS 40", "FS-FOCUS40"],
+
+  "cursorRoutingStrip": 0,
+
+  "thumbKeyStrip": 0,
+
+  "thumbKeys": {
+    "2097152": "LeftThumb",
+    "8388608": "RightThumb",
+	"8192 ": "MiddleLeftThumb"
+    "16384": "MiddleRightThumb"
+  }
+}

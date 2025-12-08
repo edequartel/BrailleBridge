@@ -1,0 +1,15 @@
+{
+  "deviceId": "ALVA640",
+  "description": "Optelec ALVA BC640",
+  "identifierPrefixes": ["ALVA640", "ALVA BC640"],
+
+  "cursorRoutingStrip": 0,
+  "thumbKeyStrip": 2,
+
+  "thumbKeys": {
+    "0": "LeftThumbKeyPressed",
+    "1": "MiddleLeftThumbKeyPressed",
+    "2": "MiddleRightThumbKeyPressed",
+    "3": "RightThumbKeyPressed"
+  }
+}

@@ -1,0 +1,6 @@
+LeftThumb:msgType=8 unit=1 strip=0 btn=2097152 press=true
+RightThumb: msgType=8 unit=1 strip=0 btn=8388608 press=true 
+LeftMiddleThumb: msgType=8 unit=1 strip=0 btn=8192  press=true 
+RightMiddleThumb: msgType=8 unit=1 strip=0 btn=16384 press=true
+cursor(0): msgType=11 unit=1 strip=0 btn=0 press=true
+cursor(9): msgType=11 unit=1 strip=0 btn=9 press=true

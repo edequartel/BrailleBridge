@@ -1,0 +1,39 @@
+C:\Users\edequ\source\repos\WPF_BS_SAM_Braille\bin\Debug\net8.0-windows\WPF_BS_SAM_Braille.exe
+C:\Users\edequ\source\repos\WPF_BS_SAM_Braille\bin\Debug\net8.0-windows\WPF_BS_SAM_Braille.deps.json
+C:\Users\edequ\source\repos\WPF_BS_SAM_Braille\bin\Debug\net8.0-windows\WPF_BS_SAM_Braille.runtimeconfig.json
+C:\Users\edequ\source\repos\WPF_BS_SAM_Braille\bin\Debug\net8.0-windows\WPF_BS_SAM_Braille.dll
+C:\Users\edequ\source\repos\WPF_BS_SAM_Braille\bin\Debug\net8.0-windows\WPF_BS_SAM_Braille.pdb
+C:\Users\edequ\source\repos\WPF_BS_SAM_Braille\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\edequ\source\repos\WPF_BS_SAM_Braille\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\edequ\source\repos\WPF_BS_SAM_Braille\obj\Debug\net8.0-windows\WPF_BS_SAM_Braille_MarkupCompile.cache
+C:\Users\edequ\source\repos\WPF_BS_SAM_Braille\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\edequ\source\repos\WPF_BS_SAM_Braille\obj\Debug\net8.0-windows\WPF_BS_SAM_Braille.g.resources
+C:\Users\edequ\source\repos\WPF_BS_SAM_Braille\obj\Debug\net8.0-windows\WPF_BS_SAM_Braille.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\edequ\source\repos\WPF_BS_SAM_Braille\obj\Debug\net8.0-windows\WPF_BS_SAM_Braille.AssemblyInfoInputs.cache
+C:\Users\edequ\source\repos\WPF_BS_SAM_Braille\obj\Debug\net8.0-windows\WPF_BS_SAM_Braille.AssemblyInfo.cs
+C:\Users\edequ\source\repos\WPF_BS_SAM_Braille\obj\Debug\net8.0-windows\WPF_BS_SAM_Braille.csproj.CoreCompileInputs.cache
+C:\Users\edequ\source\repos\WPF_BS_SAM_Braille\obj\Debug\net8.0-windows\WPF_BS_SAM_Braille.dll
+C:\Users\edequ\source\repos\WPF_BS_SAM_Braille\obj\Debug\net8.0-windows\refint\WPF_BS_SAM_Braille.dll
+C:\Users\edequ\source\repos\WPF_BS_SAM_Braille\obj\Debug\net8.0-windows\WPF_BS_SAM_Braille.pdb
+C:\Users\edequ\source\repos\WPF_BS_SAM_Braille\obj\Debug\net8.0-windows\WPF_BS_SAM_Braille.genruntimeconfig.cache
+C:\Users\edequ\source\repos\WPF_BS_SAM_Braille\obj\Debug\net8.0-windows\ref\WPF_BS_SAM_Braille.dll
+C:\Developer\Software development\BrailleBridge\bin\Debug\net8.0-windows\WPF_BS_SAM_Braille.exe
+C:\Developer\Software development\BrailleBridge\bin\Debug\net8.0-windows\WPF_BS_SAM_Braille.deps.json
+C:\Developer\Software development\BrailleBridge\bin\Debug\net8.0-windows\WPF_BS_SAM_Braille.runtimeconfig.json
+C:\Developer\Software development\BrailleBridge\bin\Debug\net8.0-windows\WPF_BS_SAM_Braille.dll
+C:\Developer\Software development\BrailleBridge\bin\Debug\net8.0-windows\WPF_BS_SAM_Braille.pdb
+C:\Developer\Software development\BrailleBridge\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Developer\Software development\BrailleBridge\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Developer\Software development\BrailleBridge\obj\Debug\net8.0-windows\App.g.cs
+C:\Developer\Software development\BrailleBridge\obj\Debug\net8.0-windows\WPF_BS_SAM_Braille_MarkupCompile.cache
+C:\Developer\Software development\BrailleBridge\obj\Debug\net8.0-windows\WPF_BS_SAM_Braille.g.resources
+C:\Developer\Software development\BrailleBridge\obj\Debug\net8.0-windows\WPF_BS_SAM_Braille.GeneratedMSBuildEditorConfig.editorconfig
+C:\Developer\Software development\BrailleBridge\obj\Debug\net8.0-windows\WPF_BS_SAM_Braille.AssemblyInfoInputs.cache
+C:\Developer\Software development\BrailleBridge\obj\Debug\net8.0-windows\WPF_BS_SAM_Braille.AssemblyInfo.cs
+C:\Developer\Software development\BrailleBridge\obj\Debug\net8.0-windows\WPF_BS_SAM_Braille.csproj.CoreCompileInputs.cache
+C:\Developer\Software development\BrailleBridge\obj\Debug\net8.0-windows\WPF_BS_SAM_Braille.sourcelink.json
+C:\Developer\Software development\BrailleBridge\obj\Debug\net8.0-windows\WPF_BS_SAM_Braille.dll
+C:\Developer\Software development\BrailleBridge\obj\Debug\net8.0-windows\refint\WPF_BS_SAM_Braille.dll
+C:\Developer\Software development\BrailleBridge\obj\Debug\net8.0-windows\WPF_BS_SAM_Braille.pdb
+C:\Developer\Software development\BrailleBridge\obj\Debug\net8.0-windows\WPF_BS_SAM_Braille.genruntimeconfig.cache
+C:\Developer\Software development\BrailleBridge\obj\Debug\net8.0-windows\ref\WPF_BS_SAM_Braille.dll
