@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WPF_BS_SAM_Braille")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c2f636ab312e727c916b2601a261f1483b74854f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+911083605130a0e6ded6ab5183c3c5fe16119351")]
 [assembly: System.Reflection.AssemblyProductAttribute("WPF_BS_SAM_Braille")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WPF_BS_SAM_Braille")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

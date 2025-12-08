@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Developer\\Software development\\BrailleBridge\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CB1597D7-93EA-45C9-ACAA-6BA1EAEC3CAA}|WPF_BS_SAM_Braille.csproj|c:\\developer\\software development\\braillebridge\\wpf_bs_sam_braille.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{CB1597D7-93EA-45C9-ACAA-6BA1EAEC3CAA}|WPF_BS_SAM_Braille.csproj|solutionrelative:wpf_bs_sam_braille.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB1597D7-93EA-45C9-ACAA-6BA1EAEC3CAA}|WPF_BS_SAM_Braille.csproj|c:\\developer\\software development\\braillebridge\\wpf_bs_sam_braille.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CB1597D7-93EA-45C9-ACAA-6BA1EAEC3CAA}|WPF_BS_SAM_Braille.csproj|solutionrelative:wpf_bs_sam_braille.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CB1597D7-93EA-45C9-ACAA-6BA1EAEC3CAA}|WPF_BS_SAM_Braille.csproj|c:\\developer\\software development\\braillebridge\\services\\braillekeymaploader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CB1597D7-93EA-45C9-ACAA-6BA1EAEC3CAA}|WPF_BS_SAM_Braille.csproj|solutionrelative:services\\braillekeymaploader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB1597D7-93EA-45C9-ACAA-6BA1EAEC3CAA}|WPF_BS_SAM_Braille.csproj|c:\\developer\\software development\\braillebridge\\viewmodel\\brailledisplayviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB1597D7-93EA-45C9-ACAA-6BA1EAEC3CAA}|WPF_BS_SAM_Braille.csproj|solutionrelative:viewmodel\\brailledisplayviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CB1597D7-93EA-45C9-ACAA-6BA1EAEC3CAA}|WPF_BS_SAM_Braille.csproj|c:\\developer\\software development\\braillebridge\\services\\brailleevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CB1597D7-93EA-45C9-ACAA-6BA1EAEC3CAA}|WPF_BS_SAM_Braille.csproj|c:\\developer\\software development\\braillebridge\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{CB1597D7-93EA-45C9-ACAA-6BA1EAEC3CAA}|WPF_BS_SAM_Braille.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB1597D7-93EA-45C9-ACAA-6BA1EAEC3CAA}|WPF_BS_SAM_Braille.csproj|c:\\developer\\software development\\braillebridge\\viewmodel\\brailledisplayviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB1597D7-93EA-45C9-ACAA-6BA1EAEC3CAA}|WPF_BS_SAM_Braille.csproj|solutionrelative:viewmodel\\brailledisplayviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CB1597D7-93EA-45C9-ACAA-6BA1EAEC3CAA}|WPF_BS_SAM_Braille.csproj|c:\\developer\\software development\\braillebridge\\interop\\samnative.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,31 +71,44 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "BrailleEvent.cs",
-              "DocumentMoniker": "C:\\Developer\\Software development\\BrailleBridge\\Services\\BrailleEvent.cs",
-              "RelativeDocumentMoniker": "Services\\BrailleEvent.cs",
-              "ToolTip": "C:\\Developer\\Software development\\BrailleBridge\\Services\\BrailleEvent.cs",
-              "RelativeToolTip": "Services\\BrailleEvent.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAgwBcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T08:45:43.941Z"
+              "Title": "WPF_BS_SAM_Braille",
+              "DocumentMoniker": "C:\\Developer\\Software development\\BrailleBridge\\WPF_BS_SAM_Braille.csproj",
+              "RelativeDocumentMoniker": "WPF_BS_SAM_Braille.csproj",
+              "ToolTip": "C:\\Developer\\Software development\\BrailleBridge\\WPF_BS_SAM_Braille.csproj*",
+              "RelativeToolTip": "WPF_BS_SAM_Braille.csproj*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-08T11:13:38.244Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "WPF_BS_SAM_Braille",
+              "DocumentMoniker": "C:\\Developer\\Software development\\BrailleBridge\\WPF_BS_SAM_Braille.csproj",
+              "RelativeDocumentMoniker": "WPF_BS_SAM_Braille.csproj",
+              "ToolTip": "C:\\Developer\\Software development\\BrailleBridge\\WPF_BS_SAM_Braille.csproj",
+              "RelativeToolTip": "WPF_BS_SAM_Braille.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-08T11:20:14.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "BrailleKeymapLoader.cs",
               "DocumentMoniker": "C:\\Developer\\Software development\\BrailleBridge\\Services\\BrailleKeymapLoader.cs",
               "RelativeDocumentMoniker": "Services\\BrailleKeymapLoader.cs",
               "ToolTip": "C:\\Developer\\Software development\\BrailleBridge\\Services\\BrailleKeymapLoader.cs",
               "RelativeToolTip": "Services\\BrailleKeymapLoader.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAIAwwGUAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA0AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-05T08:43:03.67Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "BrailleWebSocketBridge.cs",
               "DocumentMoniker": "C:\\Developer\\Software development\\BrailleBridge\\Services\\BrailleWebSocketBridge.cs",
               "RelativeDocumentMoniker": "Services\\BrailleWebSocketBridge.cs",
@@ -99,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "BrailleKeymap.cs",
               "DocumentMoniker": "C:\\Developer\\Software development\\BrailleBridge\\Services\\BrailleKeymap.cs",
               "RelativeDocumentMoniker": "Services\\BrailleKeymap.cs",
@@ -111,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "SamBrailleDisplayService.cs",
               "DocumentMoniker": "C:\\Developer\\Software development\\BrailleBridge\\Services\\SamBrailleDisplayService.cs",
               "RelativeDocumentMoniker": "Services\\SamBrailleDisplayService.cs",
@@ -123,7 +144,32 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BrailleDisplayViewModel.cs",
+              "DocumentMoniker": "C:\\Developer\\Software development\\BrailleBridge\\ViewModel\\BrailleDisplayViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\BrailleDisplayViewModel.cs",
+              "ToolTip": "C:\\Developer\\Software development\\BrailleBridge\\ViewModel\\BrailleDisplayViewModel.cs",
+              "RelativeToolTip": "ViewModel\\BrailleDisplayViewModel.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwP8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T08:48:13.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "BrailleEvent.cs",
+              "DocumentMoniker": "C:\\Developer\\Software development\\BrailleBridge\\Services\\BrailleEvent.cs",
+              "RelativeDocumentMoniker": "Services\\BrailleEvent.cs",
+              "ToolTip": "C:\\Developer\\Software development\\BrailleBridge\\Services\\BrailleEvent.cs",
+              "RelativeToolTip": "Services\\BrailleEvent.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAgwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T08:45:43.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Developer\\Software development\\BrailleBridge\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
@@ -135,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Developer\\Software development\\BrailleBridge\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -146,7 +192,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "SamNative.cs",
               "DocumentMoniker": "C:\\Developer\\Software development\\BrailleBridge\\Interop\\SamNative.cs",
               "RelativeDocumentMoniker": "Interop\\SamNative.cs",
@@ -158,19 +204,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BrailleDisplayViewModel.cs",
-              "DocumentMoniker": "C:\\Developer\\Software development\\BrailleBridge\\ViewModel\\BrailleDisplayViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\BrailleDisplayViewModel.cs",
-              "ToolTip": "C:\\Developer\\Software development\\BrailleBridge\\ViewModel\\BrailleDisplayViewModel.cs",
-              "RelativeToolTip": "ViewModel\\BrailleDisplayViewModel.cs",
-              "ViewState": "AgIAAPAAAAAAAAAAAAAnwP8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T08:48:13.363Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "RelayCommand.cs",
               "DocumentMoniker": "C:\\Developer\\Software development\\BrailleBridge\\ViewModel\\RelayCommand.cs",
               "RelativeDocumentMoniker": "ViewModel\\RelayCommand.cs",
@@ -182,7 +216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Developer\\Software development\\BrailleBridge\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
@@ -193,7 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Developer\\Software development\\BrailleBridge\\App.xaml.cs",
               "RelativeDocumentMoniker": "App.xaml.cs",
