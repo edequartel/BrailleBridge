@@ -3,3 +3,4 @@ bin/Debug/net8.0-windows/WPF_BS_SAM_Braille - kopie.exe
 bin/Debug/net8.0-windows/WPF_BS_SAM_Braille.exe
 gitInformation/SAM32.dll
 gitInformation/SAM64.dll
+setup/setup_braillebridge_v10.exe
