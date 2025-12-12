@@ -4,6 +4,7 @@ using System.Windows;
 using System.Windows.Interop;
 using BrailleApp.Services;
 using BrailleApp.ViewModels;
+using SamInterop;
 
 namespace BrailleApp
 {
@@ -155,37 +156,91 @@ namespace BrailleApp
         /// Uitpakken van de WM_SAM braille-button boodschap en doorgeven
         /// aan ViewModel + WebSocket bridge.
         /// </summary>
+        //private void HandleSamMessage(IntPtr wParam, IntPtr lParam)
+        //{
+        //    uint w = unchecked((uint)wParam.ToInt64());
+        //    uint l = unchecked((uint)lParam.ToInt64());
+
+        //    uint msgType = w & 0xFF;         // GET_SAM_MSG
+        //    uint unitId = (w >> 8) & 0xFF;   // GET_SAM_UNIT
+        //    uint strip = (w >> 16) & 0xFF;   // GET_SAM_STRIP
+
+        //    // Naar ViewModel loggen
+        //    if (DataContext is BrailleDisplayViewModel vm)
+        //    {
+        //        vm.AddBrailleKeyEvent(msgType, unitId, strip, l);
+        //    }
+
+        //    // Naar WebSocket bridge sturen → HTML pagina krijgt events
+        //    //if (_bridge != null)
+        //    //{
+        //    //    _ = _bridge.BroadcastBrailleKeyEventAsync(msgType, unitId, strip, l);
+        //    //}
+
+
+        //    //
+        //    // Naar WebSocket bridge sturen → via keymap handler
+        //    if (_bridge != null)
+        //    {
+        //        _bridge.HandleRawKeyFromSam(msgType, unitId, strip, l);
+        //    }
+        ////}
+
+
+        //private void HandleSamMessage(IntPtr wParam, IntPtr lParam)
+        //{
+        //    uint w = unchecked((uint)wParam.ToInt64());
+        //    uint l = unchecked((uint)lParam.ToInt64());
+
+        //    uint msgType = w & 0xFF;         // GET_SAM_MSG
+        //    uint unitId = (w >> 8) & 0xFF;  // GET_SAM_UNIT
+        //    uint strip = (w >> 16) & 0xFF; // GET_SAM_STRIP
+
+        //    System.Diagnostics.Debug.WriteLine(
+        //        $"[WM_SAM] msgType={msgType}, unit={unitId}, strip={strip}, param=0x{l:X8}");
+
+        //    // existing code:
+        //    if (DataContext is BrailleDisplayViewModel vm)
+        //    {
+        //        vm.AddBrailleKeyEvent(msgType, unitId, strip, l);
+        //    }
+
+        //    if (_bridge != null)
+        //    {
+        //        _bridge.HandleRawKeyFromSam(msgType, unitId, strip, l);
+        //    }
+        //}
+
         private void HandleSamMessage(IntPtr wParam, IntPtr lParam)
         {
             uint w = unchecked((uint)wParam.ToInt64());
             uint l = unchecked((uint)lParam.ToInt64());
 
-            uint msgType = w & 0xFF;         // GET_SAM_MSG
-            uint unitId = (w >> 8) & 0xFF;   // GET_SAM_UNIT
-            uint strip = (w >> 16) & 0xFF;   // GET_SAM_STRIP
+            uint msgType = w & 0xFF;
+            uint unitId = (w >> 8) & 0xFF;
+            uint strip = (w >> 16) & 0xFF;
 
-            // Naar ViewModel loggen
+            System.Diagnostics.Debug.WriteLine(
+                $"[WM_SAM] msgType={msgType}, unit={unitId}, strip={strip}, param=0x{l:X8}");
+
             if (DataContext is BrailleDisplayViewModel vm)
             {
+                // 1) Config start/end
+                if (msgType == SamNative.SAM_CONFIG_START)
+                {
+                    vm.OnSamConfigStart();
+                }
+                else if (msgType == SamNative.SAM_CONFIG_END)
+                {
+                    vm.OnSamConfigEnd();
+                }
+
+                // 2) Existing logging of button events
                 vm.AddBrailleKeyEvent(msgType, unitId, strip, l);
             }
 
-            // Naar WebSocket bridge sturen → HTML pagina krijgt events
-            //if (_bridge != null)
-            //{
-            //    _ = _bridge.BroadcastBrailleKeyEventAsync(msgType, unitId, strip, l);
-            //}
-
-
-            //
-            // Naar WebSocket bridge sturen → via keymap handler
-            if (_bridge != null)
-            {
-                _bridge.HandleRawKeyFromSam(msgType, unitId, strip, l);
-            }
-
-
-            //
+            // 3) Existing bridge mapping (for key presses etc.)
+            _bridge?.HandleRawKeyFromSam(msgType, unitId, strip, l);
         }
 
         #endregion
