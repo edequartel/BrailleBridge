@@ -93,7 +93,8 @@ namespace BrailleApp.ViewModels
         public void OnSamConfigEnd()
         {
             Status = "SAM configuration finished (no refresh yet).";
-            RefreshUnits();
+            //RefreshUnits();
+            Initialize();
         }
 
         //

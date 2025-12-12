@@ -37,9 +37,9 @@ namespace SamInterop
 
         // WM_SAM message types (wParam & 0xFF)
         public const uint SAM_RESPOND = 1;
-        public const uint SAM_LOST_SPEECH = 2;
-        public const uint SAM_CONFIG_START = 3;
-        public const uint SAM_CONFIG_END = 4;
+        public const uint SAM_LOST_SPEECH = 3;
+        public const uint SAM_CONFIG_START = 4;
+        public const uint SAM_CONFIG_END = 5;
 
         #region Enums and flags
 

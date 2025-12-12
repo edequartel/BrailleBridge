@@ -1,0 +1,8 @@
+C:\Developer\Software development\BrailleBridge\bin\Release\net8.0-windows\win-x64\publish\WPF_BS_SAM_Braille.exe
+C:\Developer\Software development\BrailleBridge\bin\Release\net8.0-windows\win-x64\publish\WPF_BS_SAM_Braille.dll
+C:\Developer\Software development\BrailleBridge\bin\Release\net8.0-windows\win-x64\publish\WPF_BS_SAM_Braille.deps.json
+C:\Developer\Software development\BrailleBridge\bin\Release\net8.0-windows\win-x64\publish\WPF_BS_SAM_Braille.runtimeconfig.json
+C:\Developer\Software development\BrailleBridge\bin\Release\net8.0-windows\win-x64\publish\WPF_BS_SAM_Braille.pdb
+C:\Developer\Software development\BrailleBridge\bin\Release\net8.0-windows\win-x64\publish\MaterialDesignColors.dll
+C:\Developer\Software development\BrailleBridge\bin\Release\net8.0-windows\win-x64\publish\MaterialDesignThemes.Wpf.dll
+C:\Developer\Software development\BrailleBridge\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Xaml.Behaviors.dll
